@@ -1,0 +1,66 @@
+﻿@model BadmintonSvc.Models.Queue
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Queue</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Club.ClubName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Club.ClubName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Player.PlayerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player.PlayerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QStatus.StatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QStatus.StatusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skillset.SkillsetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skillset.SkillsetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayDateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QueueID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

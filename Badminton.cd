@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BadmintonSvc.Models.Club">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAiIAAAAAABAAAAMAAAAAAAABQAAAAA=</HashCode>
+      <FileName>Models\Club.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BadmintonSvc.Models.Player">
+    <Position X="7.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAEAAAAAAAAACAAQAAIAIgAAAAAAACAAAAIACAAAA=</HashCode>
+      <FileName>Models\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

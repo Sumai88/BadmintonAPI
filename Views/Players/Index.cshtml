@@ -1,0 +1,99 @@
+﻿@model IEnumerable<BadmintonSvc.Models.Player>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MixInd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SkillsetID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DebugMode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlayerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlayerEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MixInd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SkillsetID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DebugMode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlayerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlayerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlayerID })
+        </td>
+    </tr>
+}
+
+</table>

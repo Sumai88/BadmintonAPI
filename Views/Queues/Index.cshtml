@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BadmintonSvc.Models.Queue>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Club.ClubName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Player.PlayerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QStatus.StatusName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skillset.SkillsetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Club.ClubName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Player.PlayerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QStatus.StatusName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Skillset.SkillsetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlayDateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.QueueID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.QueueID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.QueueID })
+        </td>
+    </tr>
+}
+
+</table>
